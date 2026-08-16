@@ -38,8 +38,12 @@ def validate(root=ROOT):
   if len(blocks)!=1 or len(blocks[0].splitlines())!=1 or blocks[0]!=blocks[0].strip():e.append(f"{p.name}: exactly one one-paragraph prompt block required")
  try:
   router=(root/"references/workflow-router.md").read_text()
-  for target in re.findall(r"`(templates/[^`]+)`",router):
+  routed=set(re.findall(r"`(templates/[^`]+)`",router))
+  for target in routed:
    if not (root/target).is_file():e.append(f"router target missing: {target}")
+  for template in templates:
+   target=template.relative_to(root).as_posix()
+   if target not in routed:e.append(f"router missing required template: {target}")
  except OSError:pass
  for p in root.rglob("*.md"):
   for m in LINK.finditer(p.read_text()):
