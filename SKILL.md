@@ -1,7 +1,7 @@
 ---
 name: dieu_google_flow_video_prompting
 description: Chuyển kịch bản, asset, phong cách, brief hoặc dữ liệu hỗn hợp thành bộ prompt copy-ready cho Google Flow; ưu tiên tuyệt đối tính nhất quán nhân vật, bối cảnh, đạo cụ, hình ảnh, âm thanh và continuity xuyên nhiều clip.
-version: 2.0.0
+version: 2.0.1
 metadata:
   hermes:
     tags: [dieu, google-flow, veo, gemini-omni, video-prompting, continuity, character-consistency, scene-consistency]
@@ -177,11 +177,13 @@ Desired timing and motion: [delta cụ thể].
 
 ## Output mặc định cho Sếp
 
-### Quy cách trình bày prompt
+### Quy cách trình bày prompt — bắt buộc
 
-- Mỗi prompt phải được trình bày thành **một đoạn văn liền mạch**, không chia prompt thành bullet, danh sách, bảng hoặc nhiều đoạn nhỏ.
-- Khi bàn giao nhiều prompt, các prompt phải **cách nhau đúng một dòng trắng** để Sếp dễ phân biệt và sao chép.
-- Các nhãn quản trị như `Clip ID`, `Inherited state`, `Assets`, `Continuity locks`, `End-state handoff` và `Rủi ro` có thể đặt ngoài prompt; riêng phần **Prompt copy-ready** luôn tuân thủ quy cách một đoạn văn.
+- **Mỗi prompt là đúng một đoạn văn liền mạch**; không chia nội dung của một prompt thành bullet, danh sách, bảng, tiêu đề con hoặc nhiều đoạn.
+- **Nếu có từ hai prompt trở lên, giữa hai prompt liên tiếp phải có đúng một dòng trắng**; không đặt bullet, dấu phân cách, tiêu đề, nhãn quản trị hoặc nội dung khác chen giữa các prompt trong khối prompt copy-ready.
+- Hai quy tắc trên chỉ thay đổi hình thức trình bày của phần **Prompt copy-ready**. **Tất cả nội dung, cấu trúc quản trị, continuity, workflow, asset map, thiết lập, end-state handoff, rủi ro và các nguyên tắc khác của skill phải giữ nguyên.**
+- Các nhãn quản trị như `Clip ID`, `Inherited state`, `Assets`, `Continuity locks`, `End-state handoff` và `Rủi ro` vẫn được đặt ngoài khối prompt copy-ready theo cấu trúc mặc định.
+- Trước khi bàn giao, phải QA định dạng: xác nhận mỗi prompt chỉ có một đoạn và các prompt cách nhau đúng một dòng trắng.
 
 1. **Workflow đề xuất** + lý do.
 2. **Input/asset map**.
