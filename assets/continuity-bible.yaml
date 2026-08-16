@@ -1,0 +1,58 @@
+project_id: ""
+aspect_ratio: ""
+default_duration_seconds: null
+
+characters:
+  CHAR_A:
+    lock: HARD
+    master_assets: []
+    canonical_identity_phrase: ""
+    face_anchors: ""
+    hair: ""
+    apparent_age: ""
+    skin_and_build: ""
+    wardrobe_by_scene: {}
+    accessories: []
+    body_language: ""
+    voice_profile: ""
+    forbidden_drift: []
+
+locations:
+  LOC_01:
+    lock: HARD
+    master_assets: []
+    layout: ""
+    spatial_landmarks: []
+    materials: []
+    time_of_day: ""
+    weather: ""
+    lighting_source_direction: ""
+    palette_texture: ""
+    camera_axis: ""
+    forbidden_drift: []
+
+props:
+  PROP_01:
+    lock: HARD
+    master_assets: []
+    geometry_material_color: ""
+    scale: ""
+    initial_holder_and_hand: ""
+    initial_state: ""
+
+look:
+  lock: HARD
+  style_reference_assets: []
+  visual_medium: ""
+  lens_family: ""
+  contrast: ""
+  color_palette: ""
+  texture: ""
+
+continuity_timeline:
+  CLIP_01:
+    inherited_state: ""
+    action_delta: ""
+    end_state_handoff: ""
+    asset_assignment: []
+    approved_changes: []
