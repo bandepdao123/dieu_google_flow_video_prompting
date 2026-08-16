@@ -12,14 +12,7 @@
 ## Clip card
 
 ```text
-CLIP_ID:
-Narrative function:
-Inherited state:
-Assets uploaded/selected:
-Continuity locks:
-Prompt copy-ready:
-End-state handoff:
-Risk:
+CLIP_ID: Narrative function: Inherited state: Assets uploaded/selected: Continuity locks: Prompt copy-ready: End-state handoff: Risk:
 ```
 
 ## Prompt rule

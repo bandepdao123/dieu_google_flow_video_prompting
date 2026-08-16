@@ -1,0 +1,8 @@
+[
+  {"id":"route-first-last","input":{"first_frame":"ASSET_001","last_frame":"ASSET_002"},"expected":{"workflow":"first_last_frame"}},
+  {"id":"route-revision","input":{"existing_generation":true,"requested_delta":"camera slower"},"expected":{"workflow":"revision"}},
+  {"id":"causal-teleport","input":{"causality_conflict":"CLIP_001 END holds PROP_01 left hand; CLIP_002 START holds it right hand without CHANGE"},"expected":{"temporal_causality":"hard_fail","tag":"prop_state_or_handedness_error"}},
+  {"id":"causal-unmotivated-weather","input":{"causality_conflict":"sunny END becomes rain START without trigger"},"expected":{"temporal_causality":"hard_fail","tag":"weather_or_time_drift"}},
+  {"id":"profile-production","input":{"connected_clips":4,"persistent_assets":3},"expected":{"profile":"production"}},
+  {"id":"format-two-prompts","input":{"prompt_count":2},"expected":{"each_prompt_physical_paragraphs":1,"blank_lines_between":1}}
+]

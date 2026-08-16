@@ -17,6 +17,10 @@ Risk rises with:
 
 Default to one central action and one coherent camera move. Split when clarity or continuity would suffer.
 
+## Camera hierarchy
+
+Resolve instructions top-down: narrative beat/feasibility → subject blocking and screen direction → shot size/angle → one primary camera move → lens/focus/look. Delete any lower-level instruction that conflicts with a higher one. A camera cannot be simultaneously static and moving; a continuous move cannot contain unexplained cuts. Treat complex hand-object contact, transformation, difficult physics, long dialogue, or multiple camera transitions as split triggers.
+
 ## Multi-clip plan
 
 For each clip define:

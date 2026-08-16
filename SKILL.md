@@ -1,7 +1,7 @@
 ---
 name: dieu_google_flow_video_prompting
 description: Chuyển kịch bản, asset, phong cách, brief hoặc dữ liệu hỗn hợp thành bộ prompt copy-ready cho Google Flow; ưu tiên tuyệt đối tính nhất quán nhân vật, bối cảnh, đạo cụ, hình ảnh, âm thanh và continuity xuyên nhiều clip.
-version: 2.0.1
+version: 2.1.0
 metadata:
   hermes:
     tags: [dieu, google-flow, veo, gemini-omni, video-prompting, continuity, character-consistency, scene-consistency]
@@ -85,6 +85,8 @@ Nếu quá tải so với thời lượng, chia thành nhiều clip. Xem `refere
 
 ### 4. Chọn workflow Flow
 
+Áp dụng router theo thứ tự ưu tiên tại `references/workflow-router.md`; không tự chọn template theo cảm tính. Chọn profile **compact**, **standard** (mặc định), hoặc **production** theo độ phức tạp/rủi ro. Áp dụng `references/language-policy.md` cho ngôn ngữ và ID.
+
 - **Text-to-video**: không có asset bắt buộc.
 - **Image-to-video**: một ảnh đã khóa identity/composition; prompt tập trung motion.
 - **Multi-reference/ingredients**: nhiều asset khóa character/product/environment/style.
@@ -131,6 +133,10 @@ Dùng `references/flow-qa-hard-fails.md`. Không bàn giao nếu:
 - asset quan trọng chưa được phân vai;
 - prompt sửa lỗi không nêu `Preserve` và `Change`;
 - output lẫn code/API không được yêu cầu.
+
+**Temporal causality là hard fail tuyệt đối:** `START` của clip N+1 phải bằng `END/HANDOFF` của clip N trước khi `CHANGE` mới xảy ra. Mọi thay đổi vị trí, pose, tay cầm/trạng thái prop, camera, thời tiết, ánh sáng hay audio phải có trigger nhìn/nghe được hoặc transition được duyệt; không dùng điểm QA để bù lỗi nhân quả.
+
+**Camera hierarchy:** story beat và tính khả thi > subject blocking/screen direction > shot size/angle > một camera move chính > lens/focus/look. Chỉ thêm chuyển động phụ nếu không mâu thuẫn tầng trên. Nếu action, dialogue, tương tác tay-vật, physics hoặc camera vượt duration, bắt buộc đơn giản hóa hoặc chia clip.
 
 ## Continuity strategy theo loại dự án
 

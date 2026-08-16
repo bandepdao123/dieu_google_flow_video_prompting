@@ -15,7 +15,8 @@ Target: 85+. Any hard fail overrides score.
 
 ## Hard fails
 
-Do not deliver until repaired:
+Do not deliver until repaired. A hard fail cannot be offset by the weighted score:
+- **Temporal causality:** connected `START` must equal the prior `END/HANDOFF`; every state delta must occur under an explicit `CHANGE` trigger. This includes character, prop, camera, environment and audio state.
 - prompt contradicts approved asset or locked fact;
 - identity phrase/wardrobe drifts without approved change;
 - location layout, weather or light direction changes unintentionally;

@@ -17,11 +17,7 @@ One coherent beat. If an image is supplied, it already defines identity/composit
 ## Prompt
 
 ```text
-[Shot size, angle and one camera move]. [Canonical subject identity] begins in
-[start state] and [central action in chronological order] within [locked location].
-[Subject motion]. [Environmental motion]. [Lighting, palette, lens/focus and mood].
-Dialogue: [short line + delivery, if needed]. SFX: [source-timed sound].
-Ambient noise: [soundscape]. End with [precise end state].
+[Shot size, angle and one camera move]. [Canonical subject identity] begins in [start state] and [central action in chronological order] within [locked location]. [Subject motion]. [Environmental motion]. [Lighting, palette, lens/focus and mood]. Dialogue: [short line + delivery, if needed]. SFX: [source-timed sound]. Ambient noise: [soundscape]. End with [precise end state].
 ```
 
 ## Handoff

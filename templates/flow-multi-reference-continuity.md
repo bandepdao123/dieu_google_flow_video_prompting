@@ -11,10 +11,7 @@ Replace with actual roles. Explicitly state what must not be borrowed from each 
 ## Prompt
 
 ```text
-Use the provided references with these roles: [role map]. Keep [CHAR_A canonical
-identity], [exact wardrobe], [PROP state] and [LOC_01 spatial layout] unchanged.
-[Shot composition]. [Action chronology]. The camera [one coherent move]. Preserve
-[time/weather/light direction/palette/lens family]. [Audio]. End with [handoff].
+Use the provided references with these roles: [role map]. Keep [CHAR_A canonical identity], [exact wardrobe], [PROP state] and [LOC_01 spatial layout] unchanged. [Shot composition]. [Action chronology]. The camera [one coherent move]. Preserve [time/weather/light direction/palette/lens family]. [Audio]. End with [handoff].
 ```
 
 ## Cross-clip locks
