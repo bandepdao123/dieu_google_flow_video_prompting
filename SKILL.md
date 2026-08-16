@@ -2,6 +2,8 @@
 name: dieu_google_flow_video_prompting
 description: Chuyển kịch bản, asset, phong cách, brief hoặc dữ liệu hỗn hợp thành bộ prompt copy-ready cho Google Flow; ưu tiên tuyệt đối tính nhất quán nhân vật, bối cảnh, đạo cụ, hình ảnh, âm thanh và continuity xuyên nhiều clip.
 version: 2.1.0
+author: Trump Creative
+license: MIT
 metadata:
   hermes:
     tags: [dieu, google-flow, veo, gemini-omni, video-prompting, continuity, character-consistency, scene-consistency]
@@ -214,9 +216,7 @@ Rủi ro
 
 Không bắt Sếp đọc YAML nội bộ trừ khi Sếp yêu cầu production bible đầy đủ.
 
-## Đóng gói skill thành website
-
-Khi xây website nhận kịch bản và ảnh tham chiếu để tạo prompt, áp dụng kiến trúc, input/output contract, bảo mật, UX và verification gates trong `references/web-app-wrapper-pattern.md`. Phải phân biệt rõ demo template với AI dùng skill thật; preload skill đích một cách tường minh, và không được coi metadata file là đã phân tích nội dung ảnh.
+**Tuỳ chọn website:** Khi thật sự đóng gói thành web app, xem `references/web-app-wrapper-pattern.md`; phần này không thay đổi hành vi prompting cốt lõi.
 
 ## Nguồn và kiến thức model
 
